@@ -21,7 +21,7 @@ class ResultScreen extends StatefulWidget {
   final List<ClassifierCategory> resultList;
   final XFile originalImage;
 
-  const ResultScreen(this.resultList, this.originalImage,{super.key});
+  const ResultScreen(this.resultList, this.originalImage, {super.key});
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
@@ -34,7 +34,7 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   void initState() {
     super.initState();
-    for(final category in widget.resultList){
+    for (final category in widget.resultList) {
       _getDiseaseInfoList(category);
     }
     // loading = false;
@@ -67,14 +67,12 @@ class _ResultScreenState extends State<ResultScreen> {
                       ),
                     ),
                     const SizedBox(height: 3),
-                    ...infoList
-                        .sublist(1)
-                        .map((info) => SubDisease(
-                            info,
-                            () => setState(() {
-                                  infoList.swap(0, infoList.indexOf(info));
-                                  scroller.moveTop();
-                                }))),
+                    ...infoList.sublist(1).map((info) => SubDisease(
+                        info,
+                        () => setState(() {
+                              infoList.swap(0, infoList.indexOf(info));
+                              scroller.moveTop();
+                            }))),
                     const SizedBox(height: 30)
                   ],
                 ),
@@ -85,8 +83,9 @@ class _ResultScreenState extends State<ResultScreen> {
 
   void _getDiseaseInfoList(ClassifierCategory category) async {
     infoList.add(await _getDiseaseInfo(category));
-    if(infoList.length == widget.resultList.length){
+    if (infoList.length == widget.resultList.length) {
       setState(() {
+        infoList.sort((a, b) => b.possibility > a.possibility ? 1 : -1);
         loading = false;
       });
     }
