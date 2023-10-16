@@ -13,17 +13,20 @@ CupertinoNavigationBar navigationBar(
         : Icon(CupertinoIcons.airplane,
             color: CupertinoColors.black.withOpacity(0.0)),
     backgroundColor: CupertinoColors.systemBackground,
-    middle: Padding(
-      padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('$imgPath/cabbage.png', width: 35, height: 35),
-          const SizedBox(width: 10),
-          Text(title,
+    middle: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const  EdgeInsets.fromLTRB(0,0,0,1),
+          child: Image.asset('$imgPath/cabbage.png', width: 35, height: 35),
+        ),
+        const SizedBox(width: 10),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0,0,0,7),
+          child: Text(title,
               style: const TextStyle(fontSize: 33, fontFamily: 'Kangwon')),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
