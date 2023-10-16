@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:bug_doctor/classify/s_classify.dart';
-import 'package:bug_doctor/common/design_config.dart';
 import 'package:bug_doctor/common/w_navigationbar.dart';
 import 'package:bug_doctor/config.dart';
 import 'package:bug_doctor/disease_list/dto/dto_simple_info.dart';
@@ -27,9 +26,9 @@ class _DiseaseListState extends State<DiseaseList> {
   @override
   void initState() {
     super.initState();
-    // labels = List<String>.from(classifier.labels);
-    // labels.remove(normalLabel);
-    labels = dummyLabels;
+    labels = List<String>.from(classifier.labels);
+    labels.remove(normalLabel);
+    // labels = dummyLabels;
 
     for(final label in labels) {
     _getSimpleInfoList(label);
