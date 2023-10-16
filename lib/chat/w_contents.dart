@@ -1,4 +1,3 @@
-import 'package:bug_doctor/dummy/dummy.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:typewritertext/typewritertext.dart';
 
@@ -27,9 +26,6 @@ const loadingContents = Column(
 Widget answerContent(String text) {
   return SingleChildScrollView(
     physics: const ClampingScrollPhysics(),
-    child: TypeWriterText(
-      text: Text(text, style: const TextStyle(fontSize: 18), textAlign: TextAlign.justify),
-      duration: const Duration(milliseconds: 20),
-    ),
+    child: Text(text, style: const TextStyle(fontSize: 18), textAlign: TextAlign.justify),
   );
 }

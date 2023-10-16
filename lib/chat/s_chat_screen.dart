@@ -24,8 +24,13 @@ class _ChatScreenState extends State<ChatScreen> {
     content = beginContents;
     callBack = (String question) async {
       setState(() => content = loadingContents);
-      final answer = await chatCompletion(question);
-      setState(() => content = answerContent(answer));
+      final stream = chatCompletionStream(question);
+      text = '';
+      stream.listen((event) {
+        setState(() {
+          content = answerContent(text = text + event.choices[0].delta.content!);
+        });
+      });
     };
   }
 
@@ -43,14 +48,14 @@ class _ChatScreenState extends State<ChatScreen> {
                 SpeechBalloon(
                   width: 350,
                   height: 300,
-                  borderRadius: 50,
+                  borderRadius: 30,
                   borderWidth: 10,
                   borderColor: CupertinoColors.systemGreen.withOpacity(0.7),
                   nipLocation: NipLocation.bottom,
                   nipHeight: 20,
                   child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 20, horizontal: 22),
+                          vertical: 15, horizontal: 17),
                       child: content),
                 ),
                 const SizedBox(height: 25),
