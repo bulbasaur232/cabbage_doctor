@@ -14,5 +14,6 @@ const detailServiceCode = 'SVC05';
 const serviceType = 'AA003';
 
 final gptApiKey = dotenv.env['GPT_KEY']!;
+const gptModel = 'gpt-3.5-turbo';
 
 

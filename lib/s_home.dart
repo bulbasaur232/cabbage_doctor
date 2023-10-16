@@ -7,6 +7,7 @@ import 'package:bug_doctor/license/s_license.dart';
 import 'package:bug_doctor/common/w_menu_button.dart';
 import 'package:bug_doctor/chat/s_chat_screen.dart';
 import 'package:bug_doctor/tflite/classifier.dart';
+import 'package:dart_openai/dart_openai.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -17,7 +18,7 @@ main() async {
   await dotenv
       .load(fileName: '.env')
       .then((value) => loadTflite());
-  chatGptInit();
+  OpenAI.apiKey = gptApiKey;
   runApp(
     const CupertinoApp(
       title: appName,
