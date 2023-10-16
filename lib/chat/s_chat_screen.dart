@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bug_doctor/chat/chatgpt/func_chatgpt.dart';
 import 'package:bug_doctor/chat/w_contents.dart';
 import 'package:bug_doctor/chat/w_input_box.dart';
@@ -17,6 +19,7 @@ class _ChatScreenState extends State<ChatScreen> {
   late String text;
   late Widget content;
   late Function(String) callBack;
+  StreamSubscription? streamSubscription;
   bool stopInput = false;
 
   @override
@@ -28,9 +31,9 @@ class _ChatScreenState extends State<ChatScreen> {
         content = loadingContents;
         stopInput = true;
       });
-      final gptStream = chatCompletionStream(question);
+      final stream = chatCompletionStream(question);
       text = '';
-      gptStream.listen(
+      streamSubscription = stream.listen(
         (event) {
           setState(() {
             content =
@@ -42,6 +45,12 @@ class _ChatScreenState extends State<ChatScreen> {
         }),
       );
     };
+  }
+
+  @override
+  void dispose() {
+    streamSubscription?.cancel();
+    super.dispose();
   }
 
   @override
