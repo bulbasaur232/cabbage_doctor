@@ -17,20 +17,30 @@ class _ChatScreenState extends State<ChatScreen> {
   late String text;
   late Widget content;
   late Function(String) callBack;
+  bool stopInput = false;
 
   @override
   void initState() {
     super.initState();
     content = beginContents;
     callBack = (String question) async {
-      setState(() => content = loadingContents);
-      final stream = chatCompletionStream(question);
-      text = '';
-      stream.listen((event) {
-        setState(() {
-          content = answerContent(text = text + event.choices[0].delta.content!);
-        });
+      setState(() {
+        content = loadingContents;
+        stopInput = true;
       });
+      final gptStream = chatCompletionStream(question);
+      text = '';
+      gptStream.listen(
+        (event) {
+          setState(() {
+            content =
+                answerContent(text = text + event.choices[0].delta.content!);
+          });
+        },
+        onDone: () => setState(() {
+          stopInput = false;
+        }),
+      );
     };
   }
 
@@ -64,7 +74,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   scale: 2.5,
                 ),
                 const SizedBox(height: 20),
-                InputBox(callBack),
+                InputBox(callBack, stopInput),
               ],
             ),
           ),

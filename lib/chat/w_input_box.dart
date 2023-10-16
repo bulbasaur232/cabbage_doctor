@@ -1,16 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class InputBox extends StatefulWidget {
+final inputController = TextEditingController();
+
+class InputBox extends StatelessWidget {
   final Function(String) onPressed;
+  final bool stopInput;
 
-  const InputBox(this.onPressed, {super.key});
-
-  @override
-  State<InputBox> createState() => _InputBoxState();
-}
-
-class _InputBoxState extends State<InputBox> {
-  final inputController = TextEditingController();
+  const InputBox(this.onPressed, this.stopInput, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,8 @@ class _InputBoxState extends State<InputBox> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               child: CupertinoTextField(
-                onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
+                onTapOutside: (event) =>
+                    FocusManager.instance.primaryFocus?.unfocus(),
                 controller: inputController,
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(30)),
@@ -37,10 +35,17 @@ class _InputBoxState extends State<InputBox> {
           ),
           CupertinoButton(
               onPressed: () {
-                widget.onPressed(inputController.text);
+                var input = inputController.text.trim();
+                if (stopInput || input == '') return;
+                onPressed(input);
                 inputController.clear();
               },
-              child: const Icon(CupertinoIcons.paperplane, size: 25)),
+              child: stopInput
+                  ? const SizedBox(
+                  width: 25,
+                  height: 25,
+                  child: CircularProgressIndicator(strokeWidth: 3))
+                  : const Icon(CupertinoIcons.paperplane, size: 25)),
           const SizedBox(width: 5)
         ],
       ),
