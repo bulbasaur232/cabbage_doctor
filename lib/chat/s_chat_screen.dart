@@ -1,4 +1,4 @@
-import 'package:bug_doctor/chat/func_chatgpt.dart';
+import 'package:bug_doctor/chat/chatgpt/func_chatgpt.dart';
 import 'package:bug_doctor/chat/w_contents.dart';
 import 'package:bug_doctor/chat/w_input_box.dart';
 import 'package:bug_doctor/common/w_navigationbar.dart';
