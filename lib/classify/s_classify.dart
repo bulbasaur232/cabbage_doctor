@@ -49,11 +49,11 @@ class _Button extends StatelessWidget {
   final ImageSource imageSource;
 
   const _Button(
-      {super.key,
-      this.color = CupertinoColors.systemGreen,
+      {this.color = CupertinoColors.systemGreen,
       required this.icon,
       required this.text,
-      required this.imageSource});
+      required this.imageSource,
+      super.key});
 
   @override
   Widget build(BuildContext context) {

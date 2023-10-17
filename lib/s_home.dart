@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 20,
                   onTap: () => Navigator.of(context).push(
                     CupertinoPageRoute(
-                      builder: (context) => DiseaseList(),
+                      builder: (context) => const DiseaseList(),
                     ),
                   ),
                 )

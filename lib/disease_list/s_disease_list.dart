@@ -27,7 +27,6 @@ class _DiseaseListState extends State<DiseaseList> {
     super.initState();
     labels = List<String>.from(classifier.labels);
     labels.remove(normalLabel);
-    // labels = dummyLabels;
 
     for (final label in labels) {
       _getSimpleInfoList(label);

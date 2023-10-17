@@ -37,6 +37,5 @@ class AddImage extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
