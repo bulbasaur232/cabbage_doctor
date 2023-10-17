@@ -71,16 +71,16 @@ class _ChatScreenState extends State<ChatScreen> {
                   borderWidth: 10,
                   borderColor: CupertinoColors.systemGreen.withOpacity(0.7),
                   nipLocation: NipLocation.bottom,
-                  nipHeight: 20,
+                  nipHeight: 30,
                   child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 17),
                       child: content),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 33),
                 Image.asset(
                   '$imgPath/cabbage_boy.png',
-                  scale: 2.5,
+                  scale: 2.7,
                 ),
                 const SizedBox(height: 20),
                 InputBox(callBack, stopInput),
