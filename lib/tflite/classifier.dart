@@ -55,23 +55,15 @@ class Classifier {
     final interpreter = await Interpreter.fromAsset(modelFileName);
 
     // #2
-    final inputShape = interpreter
-        .getInputTensor(0)
-        .shape;
-    final outputShape = interpreter
-        .getOutputTensor(0)
-        .shape;
+    final inputShape = interpreter.getInputTensor(0).shape;
+    final outputShape = interpreter.getOutputTensor(0).shape;
 
     debugPrint('Input shape: $inputShape');
     debugPrint('Output shape: $outputShape');
 
     // #3
-    final inputType = interpreter
-        .getInputTensor(0)
-        .type;
-    final outputType = interpreter
-        .getOutputTensor(0)
-        .type;
+    final inputType = interpreter.getInputTensor(0).type;
+    final outputType = interpreter.getOutputTensor(0).type;
 
     debugPrint('Input type: $inputType');
     debugPrint('Output type: $outputType');
@@ -138,7 +130,8 @@ class Classifier {
     // #3
     final categoryList = <ClassifierCategory>[];
     labelledResult.getMapWithFloatValue().forEach((key, value) {
-      final roundedVal = (value * 1000).roundToDouble() / 10; // 소숫점 두 번째 자리에서 빈올림
+      final roundedVal =
+          (value * 1000).roundToDouble() / 10; // 소숫점 두 번째 자리에서 빈올림
       final category = ClassifierCategory(key, roundedVal);
       categoryList.add(category);
       debugPrint('label: ${category.label}, score: ${category.score}');
@@ -150,4 +143,3 @@ class Classifier {
     return categoryList;
   }
 }
-

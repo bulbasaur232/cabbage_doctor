@@ -29,8 +29,6 @@ class _DetailResultScreenState extends State<DetailResultScreen> {
   void initState() {
     super.initState();
     _getDetailedInfo();
-    // loading = false;
-    // detail = dummyDetail;
   }
 
   @override

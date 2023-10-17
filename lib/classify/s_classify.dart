@@ -2,7 +2,6 @@ import 'package:bug_doctor/classify/result/s_result.dart';
 import 'package:bug_doctor/common/w_navigationbar.dart';
 import 'package:bug_doctor/config.dart';
 import 'package:bug_doctor/tflite/classifier.dart';
-import 'package:bug_doctor/tflite/vo_classifier_category.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
@@ -66,20 +65,15 @@ class _Button extends StatelessWidget {
           if (image == null) return;
 
           /// 이미지 판독후 상위 3개 결과 추출
-          final predictResult = classifier.predict(img.decodeImage(await image.readAsBytes())!);
+          final predictResult =
+              classifier.predict(img.decodeImage(await image.readAsBytes())!);
           final resultNum = predictResult.length < 3 ? predictResult.length : 3;
           final resultList = predictResult.getRange(0, resultNum).toList();
-
-          // final resultList = <ClassifierCategory>[
-          //   ClassifierCategory('탄저병', 94.5),
-          //   ClassifierCategory('탄저병', 5.5),
-          //   ClassifierCategory('탄저병', 0),
-          // ];
 
           /// 판독결과 가지고 결과 페이지 라우팅
           if (!context.mounted) return;
           Navigator.of(context).push(CupertinoPageRoute(
-              builder: (context) => ResultScreen(resultList,image)));
+              builder: (context) => ResultScreen(resultList, image)));
         },
         child: Center(
           child: Container(

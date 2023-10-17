@@ -6,7 +6,6 @@ import 'package:bug_doctor/config.dart';
 import 'package:bug_doctor/disease_list/dto/dto_simple_info.dart';
 import 'package:bug_doctor/disease_list/w_cabbage.dart';
 import 'package:bug_doctor/disease_list/w_disease_category.dart';
-import 'package:bug_doctor/dummy/dummy.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -30,8 +29,8 @@ class _DiseaseListState extends State<DiseaseList> {
     labels.remove(normalLabel);
     // labels = dummyLabels;
 
-    for(final label in labels) {
-    _getSimpleInfoList(label);
+    for (final label in labels) {
+      _getSimpleInfoList(label);
     }
   }
 
@@ -46,27 +45,27 @@ class _DiseaseListState extends State<DiseaseList> {
           child: loading
               ? const Center(child: CircularProgressIndicator())
               : SingleChildScrollView(
-            physics: const ClampingScrollPhysics(),
-            child: Column(
-              children: [
-                CabbageIntro(labels.length),
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) =>
-                      DiseaseCategory(infoList.elementAt(index)),
-                  itemCount: infoList.length,
+                  physics: const ClampingScrollPhysics(),
+                  child: Column(
+                    children: [
+                      CabbageIntro(labels.length),
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemBuilder: (context, index) =>
+                            DiseaseCategory(infoList.elementAt(index)),
+                        itemCount: infoList.length,
+                      ),
+                      const SizedBox(height: 15)
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 15)
-              ],
-            ),
-          ),
         ));
   }
 
   void _getSimpleInfoList(String label) async {
     infoList.add(await _getSimpleInfo(label));
-    if(infoList.length == labels.length){
+    if (infoList.length == labels.length) {
       setState(() {
         loading = false;
       });
@@ -95,4 +94,3 @@ class _DiseaseListState extends State<DiseaseList> {
     return simpleInfo;
   }
 }
-

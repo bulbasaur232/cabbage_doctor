@@ -42,9 +42,9 @@ class InputBox extends StatelessWidget {
               },
               child: stopInput
                   ? const SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: CircularProgressIndicator(strokeWidth: 3))
+                      width: 25,
+                      height: 25,
+                      child: CircularProgressIndicator(strokeWidth: 3))
                   : const Icon(CupertinoIcons.paperplane, size: 25)),
           const SizedBox(width: 5)
         ],

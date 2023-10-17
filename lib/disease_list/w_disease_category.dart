@@ -1,4 +1,3 @@
-
 import 'package:bug_doctor/common/extension_string.dart';
 import 'package:bug_doctor/common/url_launder.dart';
 import 'package:bug_doctor/config.dart';
@@ -13,8 +12,8 @@ class DiseaseCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => launchUrlFunc(Uri.parse(
-          detailDiseaseInfoUrl.insertAt(91, simpleInfo.sickKey))),
+      onTap: () => launchUrlFunc(
+          Uri.parse(detailDiseaseInfoUrl.insertAt(91, simpleInfo.sickKey))),
       child: Container(
         margin: const EdgeInsets.fromLTRB(12, 12, 12, 0),
         padding: const EdgeInsets.fromLTRB(8, 8, 12, 8),
@@ -41,8 +40,7 @@ class DiseaseCategory extends StatelessWidget {
                         fit: BoxFit.fitWidth,
                         child: Text(simpleInfo.sickNameKor,
                             style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22))),
+                                fontWeight: FontWeight.bold, fontSize: 22))),
                     Text(simpleInfo.sickNameEng,
                         style: const TextStyle(
                             color: CupertinoColors.inactiveGray,

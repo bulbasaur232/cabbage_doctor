@@ -11,7 +11,7 @@ class CabbageIntro extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 200,
-      padding: const EdgeInsets.fromLTRB(0,25,10,0),
+      padding: const EdgeInsets.fromLTRB(0, 25, 10, 0),
       color: CupertinoColors.systemBackground,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -34,12 +34,16 @@ class CabbageIntro extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
                   ),
                   SizedBox(width: 5),
-                  Text('Napa cabbage', style: TextStyle(fontSize: 15),)
+                  Text(
+                    'Napa cabbage',
+                    style: TextStyle(fontSize: 15),
+                  )
                 ],
               ),
               const SizedBox(height: 3),
               Text('$diseaseNum종의 질병 진단 가능',
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 18)),
             ],
           )
         ],

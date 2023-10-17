@@ -7,7 +7,6 @@ import 'package:bug_doctor/common/extension_list.dart';
 import 'package:bug_doctor/common/scroller.dart' as scroller;
 import 'package:bug_doctor/common/w_navigationbar.dart';
 import 'package:bug_doctor/config.dart';
-import 'package:bug_doctor/dummy/dummy.dart';
 import 'package:bug_doctor/tflite/vo_classifier_category.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,8 +36,6 @@ class _ResultScreenState extends State<ResultScreen> {
     for (final category in widget.resultList) {
       _getDiseaseInfoList(category);
     }
-    // loading = false;
-    // infoList = dummyList;
   }
 
   @override

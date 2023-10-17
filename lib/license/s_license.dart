@@ -39,14 +39,19 @@ class LicencesPage extends StatelessWidget {
                   },
                   //capitalize the first letter of the string
                   title: Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,0,3),
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 3),
                     child: Text(
                       ossLicenses[index].name[0].toUpperCase() +
                           ossLicenses[index].name.substring(1),
                       style: GoogleFonts.roboto(),
                     ),
                   ),
-                  subtitle: RichText(text: TextSpan(text: ossLicenses[index].description, style: const TextStyle(color: CupertinoColors.inactiveGray)),),
+                  subtitle: RichText(
+                    text: TextSpan(
+                        text: ossLicenses[index].description,
+                        style: const TextStyle(
+                            color: CupertinoColors.inactiveGray)),
+                  ),
                 ),
               ),
             );
@@ -60,6 +65,7 @@ class LicencesPage extends StatelessWidget {
 //detail page for the licence
 class LicenceDetailPage extends StatelessWidget {
   final String title, licence;
+
   const LicenceDetailPage(
       {super.key, required this.title, required this.licence});
 
@@ -74,8 +80,7 @@ class LicenceDetailPage extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             padding: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             child: SingleChildScrollView(
               physics: const RangeMaintainingScrollPhysics(),
               child: Column(

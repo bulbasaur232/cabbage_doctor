@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:bug_doctor/classify/dto/dto_disease_info.dart';
-import 'package:bug_doctor/classify/result_detail/s_result_detail.dart';
 import 'package:bug_doctor/common/design_config.dart';
 import 'package:bug_doctor/config.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,7 +23,7 @@ class MainDisease extends StatelessWidget {
                 height: 370,
                 width: double.infinity,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(5),
                     child: info.sickNameKor == normalLabel
                         ? Image.asset('$imgPath/normal.png', fit: BoxFit.fill)
                         : Image.network(info.imaPath, fit: BoxFit.fill))),

@@ -1,4 +1,3 @@
-import 'package:bug_doctor/chat/chatgpt/func_chatgpt.dart';
 import 'package:bug_doctor/classify/s_classify.dart';
 import 'package:bug_doctor/common/w_navigationbar.dart';
 import 'package:bug_doctor/config.dart';
@@ -15,9 +14,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 main() async {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await dotenv
-      .load(fileName: '.env')
-      .then((value) => loadTflite());
+  await dotenv.load(fileName: '.env').then((value) => loadTflite());
   OpenAI.apiKey = gptApiKey;
   runApp(
     const CupertinoApp(
