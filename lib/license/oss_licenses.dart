@@ -4466,15 +4466,8 @@ SOFTWARE.''',
     isSdk: false,
     isDirectDependency: false,
   ),
-  Package(name: 'Flaticon', description: 'icon image assets', homepage: 'https://www.flaticon.com',authors: ['Freepik'], version: '0.0.1', isMarkdown: false, isSdk: false, isDirectDependency: false,
-      license: '''<a href="https://www.flaticon.com/kr/free-icons/" title="양배추 아이콘">양배추 아이콘  제작자: Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/kr/free-icons/-" title="의료 및 의료 아이콘">의료 및 의료 아이콘  제작자: Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/kr/free-icons/" title="농업 아이콘">농업 아이콘  제작자: Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/kr/free-icons/" title="생각한다 아이콘">생각한다 아이콘  제작자: Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/kr/free-icons/" title="양배추 아이콘">양배추 아이콘  제작자: Freepik - Flaticon</a>'''),
-
-  Package(name: 'Chat-GPT', description: 'AI chatbot', homepage: 'https://openai.com/',authors: ['OpenAI'], version: '0.0.1', isMarkdown: false, isSdk: false, isDirectDependency: false,
-      license: ''),
+  Package(name: 'Cabbage Logo', description: 'A cute cabbage-shaped icon', authors: ['Freepik'], version: '0.0.1', isMarkdown: false, isSdk: false, isDirectDependency: false,
+      license: 'Image: cabbage.png, This cover was designed using materials from Flaticon.com'),
 ];
 
 /// Package license definition.
