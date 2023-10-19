@@ -49,7 +49,11 @@ class HomeScreen extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 MenuButton(
                   text: '사진 진단\n바로가기',
-                  color: CupertinoColors.systemGreen.withOpacity(0.9),
+                  image: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,7,0),
+                    child: Image.asset('$imgPath/camera.png',width: 60, height: 60,),
+                  ),
+                  color: const Color(0xfff8d039),
                   onTap: () => Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (context) => const Classify(),
@@ -57,9 +61,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 MenuButton(
-                  text: '진단 가능\n병충해 확인하기',
-                  color: CupertinoColors.systemMint,
-                  fontSize: 20,
+                  text: '병충해 목록\n확인하기',
+                  image: Image.asset('$imgPath/yellowfile.png', width: 60, height: 60),
+                  color: const Color(0xff81d0d8),
                   onTap: () => Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (context) => const DiseaseList(),
@@ -70,7 +74,11 @@ class HomeScreen extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 MenuButton(
                   text: '챗봇에게\n물어보기',
-                  color: CupertinoColors.systemTeal,
+                  image: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,7,5),
+                    child: Image.asset('$imgPath/chat.png', width: 60, height: 60),
+                  ),
+                  color: const Color(0xff97d5a5),
                   onTap: () => Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (context) => const ChatScreen(),
@@ -79,7 +87,11 @@ class HomeScreen extends StatelessWidget {
                 ),
                 MenuButton(
                   text: '소스 출처',
-                  color: CupertinoColors.systemCyan,
+                  image: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,0,5),
+                    child: Image.asset('$imgPath/purplefile.png',width: 60,height: 60),
+                  ),
+                  color: const Color(0xfff4a29f),
                   onTap: () => Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (context) => const LicencesPage(),
@@ -91,12 +103,12 @@ class HomeScreen extends StatelessWidget {
                   flex: 3,
                   child: Padding(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
                       decoration: BoxDecoration(
-                        color: CupertinoColors.systemOrange.withOpacity(0.9),
+                        color: const Color(0xffb2abe1),
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Padding(
