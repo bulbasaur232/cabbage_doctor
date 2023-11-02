@@ -1,6 +1,6 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-const appName = '배추도사';
+const appName = '배추요정';
 const imgPath = 'assets/images';
 const normalLabel = '정상';
 const detailDiseaseInfoUrl = 'https://ncpms.rda.go.kr/mobile/MobileSicknsDtlR.ms?hiKncrCode=VC&sKncrCode=VC021001&dtlKey=';
