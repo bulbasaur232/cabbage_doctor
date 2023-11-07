@@ -14,6 +14,7 @@ const detailServiceCode = 'SVC05';  // 병 상세정보 조회
 const serviceType = 'AA003';        // JSON 응답
 
 final gptApiKey = dotenv.env['GPT_KEY']!;
-const gptModel = 'gpt-3.5-turbo';
+// const gptModel = 'gpt-3.5-turbo';
+const gptModel = 'gpt-4-1106-preview';
 
 
