@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:bug_doctor/classify/dto/dto_disease_info.dart';
 import 'package:bug_doctor/common/design_config.dart';
 import 'package:bug_doctor/config.dart';
@@ -80,12 +81,14 @@ class MainDisease extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 240,
-                    child: Text(info.sickNameKor,
-                        overflow: TextOverflow.fade,
-                        maxLines: 3,
-                        style: const TextStyle(
-                            fontSize: 35, fontWeight: FontWeight.bold)),
+                    width: 250,
+                    child: AutoSizeText(
+                      info.sickNameKor,
+                      maxLines: 1,
+                      minFontSize: 25,
+                      style: const TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   SizedBox(
                     width: 240,

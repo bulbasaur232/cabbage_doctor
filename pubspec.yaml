@@ -51,6 +51,7 @@ dependencies:
   speech_balloon: ^0.0.4
   typewritertext: ^2.3.0
   dart_openai: ^4.0.0
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
