@@ -66,13 +66,22 @@ class _DetailResultScreenState extends State<DetailResultScreen> {
                         ),
                       ),
                       SmoothPageIndicator(
-                        controller: controller,
-                        count: 3 + detail.additionalImages.length,
-                        effect: const ExpandingDotsEffect(
-                            dotHeight: 13,
-                            dotWidth: 13,
-                            activeDotColor: Color(0xff3498db)),
-                      ),
+                          controller: controller,
+                          count: 3 + detail.additionalImages.length,
+                          effect: const ScrollingDotsEffect(
+                            dotHeight: 10,
+                            dotWidth: 20,
+                            spacing: 9,
+                            maxVisibleDots: 9,
+                            activeDotScale: 1.3,
+                            activeDotColor: Color(0xff3498db),
+                          )
+                          // const ExpandingDotsEffect(
+                          //     dotHeight: 13,
+                          //     dotWidth: 13,
+                          //     spacing: 6,
+                          //     activeDotColor: Color(0xff3498db)),
+                          ),
                     ],
                   ),
                 ),

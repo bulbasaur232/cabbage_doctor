@@ -26,8 +26,7 @@ class AddImage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 25),
+            child: Center(
               child: SingleChildScrollView(
                 physics: const ClampingScrollPhysics(),
                 child: Image.network(image.imagePath),
