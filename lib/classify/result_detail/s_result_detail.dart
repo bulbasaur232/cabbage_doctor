@@ -69,8 +69,8 @@ class _DetailResultScreenState extends State<DetailResultScreen> {
                           controller: controller,
                           count: 3 + detail.additionalImages.length,
                           effect: const ScrollingDotsEffect(
-                            dotHeight: 10,
-                            dotWidth: 20,
+                            dotHeight: 8,
+                            dotWidth: 13,
                             spacing: 9,
                             maxVisibleDots: 9,
                             activeDotScale: 1.3,
