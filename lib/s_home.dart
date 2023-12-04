@@ -15,7 +15,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 main() async {
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  await dotenv.load(fileName: '.env').then((value) => loadTflite());
+  await Future.wait([loadEnv(), loadTflite()]);
   OpenAI.apiKey = gptApiKey;
   runApp(
     const CupertinoApp(
@@ -27,6 +27,10 @@ main() async {
       home: HomeScreen(),
     ),
   );
+}
+
+Future<void> loadEnv() async {
+  dotenv.load(fileName: '.env');
 }
 
 Future<void> loadTflite() async {
