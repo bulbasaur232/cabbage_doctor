@@ -66,6 +66,7 @@ class _DiseaseListState extends State<DiseaseList> {
     infoList.add(await _getSimpleInfo(label));
     if (infoList.length == labels.length) {
       setState(() {
+        infoList.sort((a, b) => a.sickNameKor.compareTo(b.sickNameKor));
         loading = false;
       });
     }

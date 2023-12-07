@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:bug_doctor/classify/dto/dto_disease_detail_info.dart';
 import 'package:bug_doctor/classify/dto/dto_disease_info.dart';
-import 'package:bug_doctor/classify/result_detail/w_add_image.dart';
+import 'package:bug_doctor/classify/result_detail/w_additonal_image.dart';
 import 'package:bug_doctor/classify/result_detail/w_name_and_image.dart';
 import 'package:bug_doctor/classify/result_detail/w_string_info.dart';
 import 'package:bug_doctor/common/w_navigationbar.dart';
@@ -61,7 +61,7 @@ class _DetailResultScreenState extends State<DetailResultScreen> {
                             StringInfo(
                                 '방제 방법', 'bandaid', detail.preventionMethod),
                             ...detail.additionalImages
-                                .map((image) => AddImage(image)),
+                                .map((image) => AdditonalImage(image)),
                           ],
                         ),
                       ),

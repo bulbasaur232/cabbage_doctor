@@ -2,10 +2,10 @@ import 'package:bug_doctor/classify/dto/dto_disease_detail_info.dart';
 import 'package:bug_doctor/common/design_config.dart';
 import 'package:flutter/cupertino.dart';
 
-class AddImage extends StatelessWidget {
+class AdditonalImage extends StatelessWidget {
   final AdditionalImage image;
 
-  const AddImage(this.image, {super.key});
+  const AdditonalImage(this.image, {super.key});
 
   @override
   Widget build(BuildContext context) {
