@@ -22,12 +22,32 @@
 <br>
 
 ## 🖥️ API 사용 목록
-1. [Chat-Gpt API](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)
+1. [ChatGPT API - GPT 3.5 turbo](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)
 2. [국가농작물병해충관리시스템 병해충 검색 API](https://ncpms.rda.go.kr/npms/Main.np)
 
 <br>
 
 ## 📄 기능 목록
+[홈 화면과 메뉴 목록]
+
+<img width="784" alt="image" src="https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/65b1ed15-a7c2-41e0-a5da-118a6e00ffd7"><br>
+
+[사진으로 병충해 진단하기]
+
+<img width="783" alt="image" src="https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/758a532f-c310-4cac-99e4-cb901ee63d77"><br>
+
+[병충해 목록 확인하기]
+
+<img width="775" alt="image" src="https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/871f005c-a35c-4af8-b46a-f0175961d740"><br>
+
+[AI 챗봇에게 질문하기]
+
+<img width="778" alt="image" src="https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/b919c1ad-d22a-4d38-9b10-03aed48a9ae1"><br>
+
+[소스 출처 확인하기]
+
+<img width="777" alt="image" src="https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/6f84e9fc-a3ea-4a61-99ff-47e4c035a3cc"><br>
+
 
 <br>
 
