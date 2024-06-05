@@ -9,10 +9,10 @@
 <br>
 
 ## 👩‍💻 팀원 구성
-권오윤 - ios 앱 개발 <br>
-이의석 - 앱 디자인 <br>
-배재광 - AI 모델 훈련 <br>
-황용하 - AI 모델 훈련 <br>
+18010713 권오윤 - ios 앱 개발 <br>
+18010715 배재광 - AI 모델 훈련 <br>
+18010716 황용하 - AI 모델 훈련 <br>
+18010717 이의석 - 앱 디자인 <br>
 
 <br>
 
@@ -51,5 +51,14 @@
 
 <br>
 
+## 시연 영상
+
+https://github.com/bulbasaur232/cabbage_doctor/assets/73385666/4b175787-e112-4323-9769-dda6be3f5790
+
+<br>
+
 ## 📜 최종 보고서
+[배추요정_최종_보고서.pdf](https://github.com/user-attachments/files/15593149/10.pdf)
+
+
 
