@@ -1,16 +1,21 @@
-# bug_doctor
+# 🧚 배추요정 - 이미지 기반 배추 병충해 진단 앱
+배추요정은 농사 경험이 없는 초보자도 쉽게 배추 병충해를 진단할 수 있도록 도와주는 앱입니다.
 
-AI image recognition-based disease diagnosis application
+## 📅 작업 기간
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+## 👩‍💻 팀원 구성
 
-A few resources to get you started if this is your first Flutter project:
+<br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🎯 기술 스택
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>
+
+## 📄 기능 목록
+
+<br>
+
+## 📜 최종 보고서
+
